@@ -1,0 +1,8 @@
+CREATE TABLE fare (
+    code int(5) NOT NULL,
+    flightnumber int(5) NOT NULL,
+    amount int(5) NOT NULL,
+    restrictions varchar(5),
+    CONSTRAINT fare_code_pk PRIMARY KEY (code),
+    CONSTRAINT fare_flightnumber_fk FOREIGN KEY (flightnumber) REFERENCES flight(number)
+);

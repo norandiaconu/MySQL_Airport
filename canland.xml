@@ -1,0 +1,7 @@
+CREATE TABLE canland (
+    airportcode char(3) NOT NULL,
+    typename varchar(20) NOT NULL,
+    quantity int(3) NOT NULL,
+    CONSTRAINT canland_airportcode_pk PRIMARY KEY (airportcode),
+    CONSTRAINT canland_typename_fk FOREIGN KEY (typename) REFERENCES airplanetype(typename)
+);

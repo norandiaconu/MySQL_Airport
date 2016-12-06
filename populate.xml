@@ -1,0 +1,18 @@
+insert into airport values
+    ('CLT', 'Charlotte Douglas', 'Charlotte', 'NC');
+insert into canland values
+    ('CLT', 'Boeing 747', 2);
+insert into airplane values
+    ('US Airways 1', 100, 'Boeing 747');
+insert into airplanetype values
+    ('Boeing 747', 100, 'US Airways');
+insert into flightleg values
+    (12345, 00001, '5:00', '7:00', 'CLT', 'JFK');
+insert into flight values
+    (12345, 'Monday', 'US Airways');
+insert into fare values
+    (56789, 12345, 300, 'None');
+insert into leginstance values
+    (00001, '11/4/2014', 12345, 100, 8285551234, 'Noran Diaconu', '5:00', '7:00', 'US Airways 1');
+insert into seat values
+    (12345, 00001, '11/4/2014', 100, 'Noran Diaconu', 8285551234);

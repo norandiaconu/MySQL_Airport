@@ -1,0 +1,12 @@
+CREATE TABLE seat (
+    flightnumber int(5) NOT NULL,
+    legno int(5) NOT NULL,
+    date varchar(10) NOT NULL,
+    seatno int(3) NOT NULL,
+    customername varchar(20) NOT NULL,
+    cphone int(10),
+    CONSTRAINT seat_seatno_pk PRIMARY KEY (seatno),
+    CONSTRAINT seat_flightnumber_fk FOREIGN KEY (flightnumber) REFERENCES leginstance(flightnumber),
+    CONSTRAINT seat_legno_fk FOREIGN KEY (legno) REFERENCES leginstance(legno),
+    CONSTRAINT seat_date_fk FOREIGN KEY (date) REFERENCES leginstance(date)
+);

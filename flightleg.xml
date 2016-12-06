@@ -1,0 +1,10 @@
+CREATE TABLE flightleg (
+    flightnumber int(5) NOT NULL,
+    legno int(5) NOT NULL,
+    scheduleddeptime varchar(5) NOT NULL,
+    scheduledarrtime varchar(5) NOT NULL,
+    departureairport varchar(20) NOT NULL,
+    arrivalairport varchar(20) NOT NULL,
+    CONSTRAINT flightleg_legno_pk PRIMARY KEY (legno),
+    CONSTRAINT flightleg_flightnumber_fk FOREIGN KEY (flightnumber) REFERENCES flight(number)
+);

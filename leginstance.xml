@@ -1,0 +1,14 @@
+CREATE TABLE leginstance (
+    legno int(5) NOT NULL,
+    date varchar(10) NOT NULL,
+    flightnumber int(5) NOT NULL,
+    no_of_avail_seats int(3) NOT NULL,
+    cphone int(10),
+    customername varchar(20) NOT NULL,
+    deptime varchar(5) NOT NULL,
+    arrtime varchar(5) NOT NULL,
+    airplaneid varchar(20) NOT NULL,
+    CONSTRAINT leginstance_date_pk PRIMARY KEY (date),
+    CONSTRAINT leginstance_legno_fk FOREIGN KEY (legno) REFERENCES flightleg(legno),
+    CONSTRAINT leginstance_flightnumber_fk FOREIGN KEY (flightnumber) REFERENCES flightleg(flightnumber)
+);

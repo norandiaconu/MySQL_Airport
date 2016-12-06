@@ -1,0 +1,7 @@
+CREATE TABLE airport (
+    airportcode char(3) NOT NULL,
+    name varchar(20) NOT NULL,
+    city varchar(20) NOT NULL,
+    state char(2) NOT NULL,
+    CONSTRAINT airport_airportcode_pk PRIMARY KEY (airportcode)
+);

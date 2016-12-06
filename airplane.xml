@@ -1,0 +1,6 @@
+CREATE TABLE airplane (
+    airplaneid varchar(20) NOT NULL,
+    total_no_of_seats int(3) NOT NULL,
+    type varchar(20) NOT NULL,
+    CONSTRAINT airplane_airplaneid_pk PRIMARY KEY (airplaneid)
+);
